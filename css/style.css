@@ -1,0 +1,38 @@
+header, aside, main, footer, section {
+    background-color: teal;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "headr" "aside" "main" "section" "footer"
+}
+
+header {
+    grid-area: header;
+}
+
+aside {
+    grid-area: aside;
+}
+
+main {
+    grid-area: main;
+}
+
+section {
+    grid-area: section;
+}
+
+footer {
+    grid-area: footer;
+}
+
+@media (min-width: 680px) {
+    .grid {
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: "header header" "section main" "aside main" "footer footer"
+    }
+}
